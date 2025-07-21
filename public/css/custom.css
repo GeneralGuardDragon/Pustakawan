@@ -1,0 +1,52 @@
+/* Pusatkan logo ke tengah layar */
+    .logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh; /* penuh layar */
+    background-color:rgb(255, 255, 255); /* sesuaikan dengan tema */
+    }
+
+    /* Kontainer logo */
+    .logo-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 150px; /* ubah ukuran sesuai kebutuhan */
+    height: auto;
+    }
+
+    /* Gambar logo */
+    .logo-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Efek kilau */
+    .shine {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0.1) 100%);
+    transform: skewX(-25deg);
+    animation: shineAnim 3s infinite ease-in-out;
+    }
+    .logo-description {
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.4;
+    text-align: center;
+    }
+
+    /* Keyframes kilau */
+    @keyframes shineAnim {
+    0% { left: -75%; }
+    100% { left: 125%; }
+    }
